@@ -1,0 +1,40 @@
+<mat-card class="card">
+  <form [formGroup]="formGroup">
+    <div class="filtro-componente">
+      <div class="filtro">
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Turma</mat-label>
+          <input formControlName="turma" matInput id="turma" />
+        </mat-form-field>
+
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Atividade</mat-label>
+          <input formControlName="atividade" matInput id="atividade" />
+        </mat-form-field>
+
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Linguagem</mat-label>
+          <input formControlName="linguagem" matInput id="linguagem" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Selecione intervalo de data</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Data inicio">
+            <input matEndDate placeholder="Data final">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+      </div>
+      <div class="botao">
+        <button class="botao-limpar-filtros" mat-raised-button >Limpar</button>
+        <button class="botao-buscar" mat-raised-button ><span class="texto">Buscar</span></button>
+        <div *ngIf="tipoPerfil==='aluno'">
+          <button class="botao-buscar" mat-raised-button ><span class="texto">Enviar nova submissao</span></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</mat-card>

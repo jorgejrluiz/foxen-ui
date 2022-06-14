@@ -1,0 +1,36 @@
+<mat-card class="card">
+  <form [formGroup]="formGroup">
+    <div class="filtro-componente">
+      <div class="filtro">
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Categoria</mat-label>
+          <input formControlName="categoria" matInput id="categoria" />
+        </mat-form-field>
+
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Linguagem</mat-label>
+          <input formControlName="linguagem" matInput id="Linguagem" />
+        </mat-form-field>
+
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Complexidade</mat-label>
+          <input formControlName="complexidade" matInput id="complexidade" />
+        </mat-form-field>
+
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Status</mat-label>
+          <input formControlName="status" matInput id="status" />
+        </mat-form-field>
+
+      </div>
+      <div class="botoes">
+        <button class="botao-limpar-filtros" mat-raised-button (click)="abrirModalDetalhamento()"><span class="texto">Cadastrar novo algoritmo</span></button>
+
+        <div class="botao-buscar-limpar">
+          <button class="botao-limpar-filtros" mat-raised-button >Limpar</button>
+          <button class="botao-buscar" mat-raised-button ><span class="texto">Buscar</span></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</mat-card>

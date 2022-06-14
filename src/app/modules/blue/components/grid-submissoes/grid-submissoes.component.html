@@ -1,0 +1,69 @@
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <!-- descricao Column -->
+  <ng-container matColumnDef="turma">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by turma">
+      Turma
+    </th>
+    <td mat-cell *matCellDef="let submissao"> {{submissao.turma}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="atividade">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by atividade">
+      Atividade
+    </th>
+    <td mat-cell *matCellDef="let submissao"> {{submissao.atividade}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="linguagem">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by linguagem">
+      Linguagem
+    </th>
+    <td mat-cell *matCellDef="let submissao"> {{submissao.linguagem}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="data">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by data">
+      Data
+    </th>
+    <td mat-cell *matCellDef="let submissao"> {{submissao.data}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="porcentagemPublica">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by porcentagemPublica">
+      % Publica
+    </th>
+    <td mat-cell *matCellDef="let submissao"> {{submissao.porcentagemPublica }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="porcentagemPrivada">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by porcentagemPrivada">
+      % Publica
+    </th>
+    <td mat-cell *matCellDef="let submissao"> {{submissao.porcentagemPrivada }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by status">
+      status
+    </th>
+    <td mat-cell *matCellDef="let submissao"> {{submissao.status }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="detalhes">
+    <th id="detalhes" mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let algoritmo">
+      <mat-icon
+        title="Detalhes do Caso"
+        (click)="abrirModalDetalhamento()"
+        >read_more</mat-icon
+      >
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

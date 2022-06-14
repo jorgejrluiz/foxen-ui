@@ -1,0 +1,76 @@
+.card {
+    width: 1024.99px;
+    position: absolute;
+    margin-top: 26px;
+}
+
+.form {
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    .formField-Turma{
+        width: 100%;
+    }
+
+    .formField-Atividade {
+        width: 100%;
+    }
+
+    .formField-Data{
+        width: 50%;
+    }
+
+    .formField-porcentagemPublica {
+        width: calc(50% - (calc(34% - 30px)));
+        margin-left: 30px;
+    }
+
+    .formField-porcentagemPrivada {
+        margin-left: 30px;
+        width: calc(50% - (calc(34% - 30px)));
+    }
+
+    .formField-Autor {
+        width: 100%;
+    }
+
+    .formField-Codigo {
+        width: 100%;
+        height: auto;
+    }
+
+    .entradaSaida{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
+
+
+.span{
+    font-style: normal;
+    color: #222222;
+    &__display{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__response{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        width: auto;
+    }
+}   
+
+.content{
+    margin-bottom: 15px;
+}
+
+.botao{
+    display: flex;
+    justify-content: flex-end;
+}

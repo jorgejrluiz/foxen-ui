@@ -1,0 +1,63 @@
+.card {
+    width: 1024.99px;
+    position: absolute;
+    margin-top: 26px;
+}
+
+.form {
+    margin-left: 20px;
+    margin-right: 20px;
+    .formField-Categoria{
+        width: 100%;
+    }
+
+    .formField-Descricao {
+        width: 100%;
+    }
+
+    .formField-Complexidade {
+        width: calc(50% - 30px);
+    }
+
+    .formField-Linguagem {
+        margin-left: 30px;
+        width: calc(50%);
+    }
+
+    .formField-Autor {
+        width: 100%;
+    }
+
+    .formField-Codigo {
+        width: 100%;
+        height: auto;
+    }
+
+
+}
+
+.span{
+    font-style: normal;
+    color: #222222;
+    &__display{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__response{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        width: auto;
+    }
+}   
+
+.content{
+    margin-bottom: 15px;
+}
+
+.botao{
+    display: flex;
+    justify-content: flex-end;
+}

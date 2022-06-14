@@ -1,0 +1,65 @@
+@import "../../../../../theme.scss";
+
+.card {
+    background-color: white;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: black;
+}
+
+.filtro-componente {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.filtro {
+    width: 85%;
+    
+    .formField-Atendente {
+        width: 58%;
+        margin-right: 2%;
+    }
+
+    .formField-Segmento {
+        width: 38%;
+        margin-right: 2%;
+    }
+}
+
+.formField {
+    width: 20%;
+    margin-right: 2%;
+}
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-buscar-limpar {
+
+    .botao-limpar-filtros {
+        margin-right: 15px;
+        background: white;
+        border: solid 1px #005e3b;
+        color: #005e3b;
+        height: 45px;
+        
+    }
+
+    .botao-buscar {
+        background: #005e3b;
+        height: 45px;
+
+        .texto{
+            color: #FFFFFF;
+        }
+    }
+}
+
+::ng-deep .mat-form-field .mat-form-field-subscript-wrapper {
+    height: 16px;
+}
