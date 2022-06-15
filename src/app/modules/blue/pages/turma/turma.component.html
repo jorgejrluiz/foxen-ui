@@ -1,1 +1,82 @@
 <app-header></app-header>
+<div class="page">
+    <mat-card class="card">
+        <form [formGroup]="formGroup">
+          <div class="filtro-componente">
+            <div class="filtro">
+              <mat-form-field class="formField" appearance="outline">
+                <mat-label>Turma</mat-label>
+                <input formControlName="turma" matInput id="turma" />
+              </mat-form-field>
+      
+              <mat-form-field class="formField" appearance="outline">
+                <mat-label>Professor</mat-label>
+                <input formControlName="professor" matInput id="professor" />
+              </mat-form-field>
+            </div>
+            <div class="botao">
+              <button class="botao-limpar-filtros" mat-raised-button >Limpar</button>
+              <button class="botao-buscar" mat-raised-button ><span class="texto">Buscar</span></button>
+            </div>
+          </div>
+        </form>
+      </mat-card>
+
+    <div class="grid">
+        <table mat-table matSort   [dataSource]="dataSource"  class="mat-elevation-z8">
+            <!-- descricao Column -->
+            <ng-container matColumnDef="Turma">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Turma">
+                Turma
+            </th>
+            <td mat-cell *matCellDef="let turma"> {{turma.nomeTurma}} </td>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="Professores">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Professores">
+                Professores
+            </th>
+            <td mat-cell *matCellDef="let turma"> {{turma.professores}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="Alunos">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Alunos">
+                    Alunos
+                </th>
+                <td mat-cell *matCellDef="let turma"> {{turma.alunosNome | truncate:30}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Monitores">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Monitores">
+                    Monitores
+                </th>
+                <td mat-cell *matCellDef="let turma"> {{turma.monitores}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="detalhes">
+            <th id="detalhes" mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let turma">
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="solicitarInclusao(turma)" *ngIf="perfil ==='Aluno'">
+                        <span>Solicitar inclusão</span>
+                    </button>
+                    <button mat-menu-item (click)="abrirModalDetalhamento(turma)" *ngIf="perfil==='Professor'">
+                        <span>Solicitações</span>
+                    </button>
+                    <button mat-menu-item *ngIf="perfil==='Professor'">
+                        <span>Cadastrar atividade</span>
+                    </button>
+                </mat-menu>
+            </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+
+</div>

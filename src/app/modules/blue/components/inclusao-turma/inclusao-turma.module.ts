@@ -7,8 +7,15 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DetalhesSubmissaoComponent } from './detalhes-submissao.component';
+import { InclusaoTurmaComponent } from './inclusao-turma.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { TruncatePipeModule } from 'src/app/shared/pipes/truncate.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -22,9 +29,17 @@ import { MatIconModule } from '@angular/material/icon';
     MatSelectModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatIconModule
+    MatCheckboxModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatSortModule,
+    TruncatePipeModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatDividerModule,
   ],
-  declarations: [DetalhesSubmissaoComponent],
-  exports: [DetalhesSubmissaoComponent]
+  declarations: [InclusaoTurmaComponent],
+  exports: [InclusaoTurmaComponent]
 })
-export class DetalhamentoSubmissaoModule { }
+export class InclusaoTurmaModule { }

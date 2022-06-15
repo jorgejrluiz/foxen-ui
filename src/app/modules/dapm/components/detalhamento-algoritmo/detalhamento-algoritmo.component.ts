@@ -49,7 +49,7 @@ export class DetalhamentoAlgoritmoComponent implements OnInit {
    
 
   setarCamposAlgoritmo(){
-    this.formGroup.controls['categoria'].setValue("Algoritmo de ordenação");
+    this.formGroup.controls['categoria'].setValue(this.data.algoritmo.categoria);
     this.formGroup.controls['descricao'].setValue(this.data.algoritmo.descricao);
     this.formGroup.controls['complexidade'].setValue(this.data.algoritmo.complexidade);
     this.formGroup.controls['linguagem'].setValue(this.data.algoritmo.linguagem);
@@ -65,6 +65,7 @@ export class DetalhamentoAlgoritmoComponent implements OnInit {
   }
 
   onNoClick(){
+    console.log(this.formGroup.value);
     this.dialogRef.close(this.formGroup.value);
   }
 

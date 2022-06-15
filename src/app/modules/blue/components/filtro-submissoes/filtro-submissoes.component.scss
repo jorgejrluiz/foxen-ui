@@ -35,29 +35,33 @@
     margin-right: 2%;
 }
 
-.botao {
-    display: flex;
-    justify-content: flex-end;
 
-    .botao-limpar-filtros {
-        margin-right: 15px;
-        background: white;
-        border: solid 1px #005e3b;
-        color: #005e3b;
-        height: 45px;
-        
-    }
 
-    .botao-buscar {
-        background: #005e3b;
-        height: 45px;
+.botao-limpar-filtros {
+    margin-right: 15px;
+    background: white;
+    border: solid 1px #005e3b;
+    color: #005e3b;
+    height: 45px;
+    
+}
 
-        .texto{
-            color: #FFFFFF;
-        }
+.botao-buscar {
+    background: #005e3b;
+    height: 45px;
+
+    .texto{
+        color: #FFFFFF;
     }
 }
 
+
 ::ng-deep .mat-form-field .mat-form-field-subscript-wrapper {
     height: 16px;
+}
+
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
 }

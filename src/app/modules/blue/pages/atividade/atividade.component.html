@@ -1,0 +1,91 @@
+<app-header></app-header>
+<div class="page">
+  <mat-card class="card">
+  <form [formGroup]="formGroup">
+    <div class="filtro-componente">
+      <div class="filtro">
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Atividade</mat-label>
+          <input formControlName="atividade" matInput id="atividade" />
+        </mat-form-field>
+
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Linguagem</mat-label>
+          <input formControlName="linguagem" matInput id="linguagem" />
+        </mat-form-field>
+
+        <mat-form-field class="formField" appearance="outline">
+          <mat-label>Status</mat-label>
+          <input formControlName="status" matInput id="status" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Selecione intervalo de data</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Data inicio">
+            <input matEndDate placeholder="Data final">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+      </div>
+      <div class="botoes">
+          <button class="botao-limpar-filtros" mat-raised-button (click)="abrirModalDetalhamento()" ><span class="texto">Cadastrar nova atividade</span></button>
+        <div class="botao-buscar-limpar">
+          <button class="botao-limpar-filtros" mat-raised-button >Limpar</button>
+          <button class="botao-buscar" mat-raised-button ><span class="texto">Buscar</span></button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </mat-card>
+
+  <div class="grid">
+    <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+        <!-- descricao Column -->
+        <ng-container matColumnDef="descricao">
+        <th mat-header-cell *matHeaderCellDef>
+          Descrição
+        </th>
+        <td mat-cell *matCellDef="let atividade"> {{atividade.descricao}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="linguagem">
+        <th mat-header-cell *matHeaderCellDef>
+          Linguagem
+        </th>
+        <td mat-cell *matCellDef="let atividade"> {{atividade.linguagem}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="dataLimite">
+            <th mat-header-cell *matHeaderCellDef>
+              Data Limite
+            </th>
+            <td mat-cell *matCellDef="let atividade"> {{atividade.dataLimite}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>
+                Status
+            </th>
+            <td mat-cell *matCellDef="let atividade"> {{atividade.status}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="detalhes">
+        <th id="detalhes" mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let turma">
+            <button mat-icon-button >
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+
+<app-detalhes-atividade></app-detalhes-atividade>

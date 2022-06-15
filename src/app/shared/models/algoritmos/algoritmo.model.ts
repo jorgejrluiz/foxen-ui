@@ -5,4 +5,5 @@ export interface Algoritmo {
     complexidade: string;
     status: string;
     algoritmo: string;
+    categoria: string;
 }

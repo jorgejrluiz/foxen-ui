@@ -28,11 +28,13 @@
         </mat-form-field>
 
       </div>
-      <div class="botao">
-        <button class="botao-limpar-filtros" mat-raised-button >Limpar</button>
-        <button class="botao-buscar" mat-raised-button ><span class="texto">Buscar</span></button>
+      <div class="botoes">
         <div *ngIf="tipoPerfil==='aluno'">
-          <button class="botao-buscar" mat-raised-button ><span class="texto">Enviar nova submissao</span></button>
+          <button class="botao-limpar-filtros" mat-raised-button ><span class="texto">Enviar nova submissao</span></button>
+        </div>
+        <div class="botao-buscar-limpar">
+          <button class="botao-limpar-filtros" mat-raised-button >Limpar</button>
+          <button class="botao-buscar" mat-raised-button ><span class="texto">Buscar</span></button>
         </div>
       </div>
     </div>

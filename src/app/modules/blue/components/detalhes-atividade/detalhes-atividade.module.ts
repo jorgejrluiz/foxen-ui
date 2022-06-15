@@ -7,7 +7,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DetalhesSubmissaoComponent } from './detalhes-submissao.component';
+import { DetalhesAtividadeComponent } from './detalhes-atividade.component';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatDialogModule,
     MatIconModule
   ],
-  declarations: [DetalhesSubmissaoComponent],
-  exports: [DetalhesSubmissaoComponent]
+  declarations: [DetalhesAtividadeComponent],
+  exports: [DetalhesAtividadeComponent]
 })
-export class DetalhamentoSubmissaoModule { }
+export class DetalhesAtividadeModule { }

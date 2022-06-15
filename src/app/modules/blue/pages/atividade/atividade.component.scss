@@ -34,10 +34,7 @@
     width: 20%;
     margin-right: 2%;
 }
-.botoes {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 
 .botao-limpar-filtros {
@@ -61,4 +58,26 @@
 
 ::ng-deep .mat-form-field .mat-form-field-subscript-wrapper {
     height: 16px;
+}
+
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+td, th {
+    width: 15%;
+}
+
+
+.page{
+    margin-left: 5px;
+    margin-right: 5px;
 }
