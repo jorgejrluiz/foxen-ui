@@ -7,5 +7,6 @@ export class SubmissaoModel {
     porcentagemPublica: string;
     porcentagemPrivada: string;
     status: string;
-    erros: string []
+    erros: string [];
+    resultado: string;
 }

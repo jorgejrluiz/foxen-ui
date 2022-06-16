@@ -17,17 +17,17 @@
     }
 
     .formField-Data{
-        width: 50%;
-    }
-
-    .formField-porcentagemPublica {
-        width: calc(50% - (calc(34% - 30px)));
+        width: calc(50% - 30px);
         margin-left: 30px;
     }
 
-    .formField-porcentagemPrivada {
-        margin-left: 30px;
-        width: calc(50% - (calc(34% - 30px)));
+    .formField-Linguagem {
+        width: 50%;;
+        
+    }
+
+    .formField-Arquivos {
+        width: 100%;
     }
 
     .formField-Autor {
@@ -48,6 +48,9 @@
 
 }
 
+.trend-dialog .mat-dialog-container{
+    overflow-y: hidden !important;
+}
 
 .span{
     font-style: normal;

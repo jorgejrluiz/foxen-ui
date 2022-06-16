@@ -6,5 +6,9 @@ export class AtividadeModel {
     linguagem: string[];
     dataLimite: string;
     status: string;
+
+    constructor(){
+        
+    }
 }
 

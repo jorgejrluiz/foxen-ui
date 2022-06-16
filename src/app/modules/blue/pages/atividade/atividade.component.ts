@@ -55,8 +55,10 @@ export class AtividadeComponent implements OnInit {
 
   abrirModalDetalhamento() {
     const dialogRef = this.dialog.open(DetalhesAtividadeComponent, {
-      width: '1024px',
-      disableClose: true,
+      width: '768px',
+      height: 'auto',
+      disableClose: false,
+      panelClass: 'trend-dialog',
       position: { 
         top: '100px',
       },
@@ -65,7 +67,9 @@ export class AtividadeComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result)
+      let atividade: AtividadeModel = {idAtividade:9,linguagem: result.linguagem.join(', '), descricao: result.atividade, status:'Ativo', turma: this.turma.toString(), dataLimite: result.data, idTurma:this.turma}
+      this.atividades.push(atividade)
+      this.inicializarDataSource();
     });
   }
 }

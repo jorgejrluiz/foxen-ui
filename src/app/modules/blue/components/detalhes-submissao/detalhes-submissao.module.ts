@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DetalhesSubmissaoComponent } from './detalhes-submissao.component';
 import { MatIconModule } from '@angular/material/icon';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatSelectModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    NgxMatFileInputModule
   ],
   declarations: [DetalhesSubmissaoComponent],
   exports: [DetalhesSubmissaoComponent]

@@ -21,13 +21,13 @@
     }
 
     .formField-porcentagemPublica {
-        width: calc(50% - (calc(34% - 30px)));
+        width: calc(50% - (calc(31% - 30px)));
         margin-left: 30px;
     }
 
     .formField-porcentagemPrivada {
         margin-left: 30px;
-        width: calc(50% - (calc(34% - 30px)));
+        width: calc(50% - (calc(32% - 30px)));
     }
 
     .formField-Autor {
@@ -45,6 +45,9 @@
         justify-content: space-between;
     }
 
+    .formField-Arquivos {
+        margin-left: 30px;
+    }
 
 }
 

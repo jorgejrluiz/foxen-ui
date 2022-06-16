@@ -1,85 +1,99 @@
-<mat-dialog-content class="content" >
+<form [formGroup]="formGroup" class="form">
+  <mat-form-field class="formField-Turma" appearance="outline">
+    <mat-label>Turma</mat-label>
+    <mat-select formControlName="turma" matInput id="turma">
+      <mat-option *ngFor="let linguagem of turmasDisponiveis" [value]="linguagem">
+        {{linguagem}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-  <form [formGroup]="formGroup" class="form">
-    <mat-form-field class="formField-Turma" appearance="outline">
-      <mat-label>Turma</mat-label>
-      <input formControlName="turma" matInput id="turma" />
+  <mat-form-field class="formField-Atividade" appearance="outline">
+    <mat-label>Atividade</mat-label>
+    <mat-select formControlName="atividade" matInput id="atividade">
+      <mat-option *ngFor="let linguagem of atividadesDisponiveis" [value]="linguagem">
+        {{linguagem}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="formField-Linguagem" appearance="outline">
+    <mat-label>Linguagem</mat-label>
+    <mat-select formControlName="linguagem" matInput id="linguagem">
+      <mat-option *ngFor="let linguagem of linguagens" [value]="linguagem">
+        {{linguagem}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="!visualizacao" class="formField-Arquivos" appearance="outline">
+    <ngx-mat-file-input placeholder="Selecione os arquivos" formControlName="acceptfile">
+    </ngx-mat-file-input>
+ </mat-form-field>
+
+  <br>
+  <div *ngIf="visualizacao">
+    <mat-form-field class="formField-Data" appearance="outline">
+      <mat-label>Data</mat-label>
+      <input formControlName="data" matInput id="data" />
+    </mat-form-field>
+    <mat-form-field class="formField-porcentagemPublica" appearance="outline" >
+      <mat-label>% Publica</mat-label>
+      <input formControlName="porcentagemPublica" matInput id="porcentagemPublica" />
     </mat-form-field>
 
-    <mat-form-field class="formField-Atividade" appearance="outline">
-      <mat-label>Atividade</mat-label>
-      <input formControlName="atividade" matInput id="atividade" />
+    <mat-form-field class="formField-porcentagemPrivada" appearance="outline">
+      <mat-label>% Privada</mat-label>
+      <input formControlName="porcentagemPrivada" matInput id="porcentagemPrivada" />
+    </mat-form-field>
+  </div>
+ 
+
+  <div *ngIf="visualizacao">
+    <mat-form-field class="formField-Codigo" appearance="outline">
+      <mat-label>Erros</mat-label>
+      <input formControlName="erros" matInput id="erros" />
+    </mat-form-field>
+  </div>
+  <div class="entradaSaida" *ngIf="visualizacao">
+    <mat-form-field class="formField-Resultado" appearance="outline">
+      <mat-label>Entrada Publica</mat-label>
+      <textarea 
+        formControlName="entradaPublica"
+        matInput 
+        id="entradaPublica"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        ></textarea>
     </mat-form-field>
 
-    <mat-form-field class="formField-Linguagem" appearance="outline">
-      <mat-label>Linguagem</mat-label>
-      <input formControlName="linguagem" matInput id="linguagem" />
+    <mat-form-field class="formField-Resultado" appearance="outline">
+      <mat-label>Saida Publica</mat-label>
+      <textarea 
+        formControlName="resultado"
+        matInput 
+        id="resultado"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        ></textarea>
     </mat-form-field>
-    <br>
-    <div >
-      <mat-form-field class="formField-Data" appearance="outline">
-        <mat-label>Data</mat-label>
-        <input formControlName="data" matInput id="data" />
-      </mat-form-field>
-  
-        <mat-form-field class="formField-porcentagemPublica" appearance="outline">
-          <mat-label>% Publica</mat-label>
-          <input formControlName="porcentagemPublica" matInput id="porcentagemPublica" />
-        </mat-form-field>
-    
-        <mat-form-field class="formField-porcentagemPrivada" appearance="outline">
-          <mat-label>% Privada</mat-label>
-          <input formControlName="porcentagemPrivada" matInput id="porcentagemPrivada" />
-        </mat-form-field>
-    </div>
-   
 
-    <div>
-      <mat-form-field class="formField-Codigo" appearance="outline">
-        <mat-label>Erros</mat-label>
-        <input formControlName="erros" matInput id="erros" />
-      </mat-form-field>
-    </div>
-    <div class="entradaSaida">
-      <mat-form-field class="formField-Resultado" appearance="outline">
-        <mat-label>Entrada Publica</mat-label>
-        <textarea 
-          formControlName="entradaPublica"
-          matInput 
-          id="entradaPublica"
-          cdkTextareaAutosize
-          #autosize="cdkTextareaAutosize"
-          cdkAutosizeMinRows="1"
-          ></textarea>
-      </mat-form-field>
-  
-      <mat-form-field class="formField-Resultado" appearance="outline">
-        <mat-label>Saida Publica</mat-label>
-        <textarea 
-          formControlName="resultado"
-          matInput 
-          id="resultado"
-          cdkTextareaAutosize
-          #autosize="cdkTextareaAutosize"
-          cdkAutosizeMinRows="1"
-          ></textarea>
-      </mat-form-field>
+    <mat-form-field class="formField-Resultado" appearance="outline">
+      <mat-label>Saida Aluno</mat-label>
+      <textarea 
+        formControlName="resultado"
+        matInput 
+        id="resultado"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        ></textarea>
+    </mat-form-field>
 
-      <mat-form-field class="formField-Resultado" appearance="outline">
-        <mat-label>Saida Aluno</mat-label>
-        <textarea 
-          formControlName="resultado"
-          matInput 
-          id="resultado"
-          cdkTextareaAutosize
-          #autosize="cdkTextareaAutosize"
-          cdkAutosizeMinRows="1"
-          ></textarea>
-      </mat-form-field>
-
-    </div>
-  </form>
-</mat-dialog-content>
+  </div>
+</form>
 <div mat-dialog-actions class="botao">
-  <button mat-button (click)="onNoClick()">Ok</button>
+  <button mat-button (click)="onNoClick()">{{textoBotao}}</button>
 </div>

@@ -30,7 +30,7 @@
       </div>
       <div class="botoes">
         <div *ngIf="tipoPerfil==='aluno'">
-          <button class="botao-limpar-filtros" mat-raised-button ><span class="texto">Enviar nova submissao</span></button>
+          <button class="botao-limpar-filtros" (click)="abrirModalDetalhamento()" mat-raised-button ><span class="texto">Enviar nova submissao</span></button>
         </div>
         <div class="botao-buscar-limpar">
           <button class="botao-limpar-filtros" mat-raised-button >Limpar</button>

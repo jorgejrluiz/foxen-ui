@@ -8,8 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DetalhesSubmissaoComponent } from '../detalhes-submissao/detalhes-submissao.component';
 
 const ELEMENT_DATA: SubmissaoModel[] = [
-  {idSubmissao: 1, turma: 'AED 2', atividade: 'TP2: Ordenação por inserção', linguagem: 'Java', data: '08/05/2022 20:59', porcentagemPublica: '0', porcentagemPrivada: '0', status: 'Corrigido', erros: ['Error: Could not find or load main class Program Caused by: java.lang.ClassNotFoundException: Program']},
-  {idSubmissao: 2, turma: 'AED 2', atividade: 'TP2: Ordenação por inserção', linguagem: 'Java', data: '08/05/2022 21:30', porcentagemPublica: '100', porcentagemPrivada: '100', status: 'Corrigido', erros: []},
+  
 ];
 
 @Component({

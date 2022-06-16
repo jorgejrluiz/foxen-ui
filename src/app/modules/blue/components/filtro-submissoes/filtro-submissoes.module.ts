@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FiltroSubmissoesComponent } from './filtro-submissoes.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   imports: [
     CommonModule,
@@ -20,7 +21,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatSelectModule,
     ReactiveFormsModule,  
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatProgressSpinnerModule
   ],
   declarations: [FiltroSubmissoesComponent],
   exports: [FiltroSubmissoesComponent]

@@ -67,7 +67,7 @@
                     <button mat-menu-item (click)="abrirModalDetalhamento(turma)" *ngIf="perfil==='Professor'">
                         <span>Solicitações</span>
                     </button>
-                    <button mat-menu-item *ngIf="perfil==='Professor'">
+                    <button mat-menu-item routerLink="{{turma.idTurma}}/atividade" *ngIf="perfil==='Professor'">
                         <span>Cadastrar atividade</span>
                     </button>
                 </mat-menu>

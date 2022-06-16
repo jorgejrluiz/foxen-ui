@@ -60,6 +60,9 @@
     height: 16px;
 }
 
+.trend-dialog .mat-dialog-content{
+    overflow: hidden !important;
+}
 
 .botoes {
     display: flex;

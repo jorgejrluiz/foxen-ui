@@ -7,5 +7,7 @@ export class Atividades {
         {idAtividade:3, descricao:'TP2: Ordenação por seleção', linguagem:['Java', 'C++'], status:'Ativo',turma:'Algoritmos e estrutura de dados II',idTurma:1, dataLimite:'22/06/2022'},
         {idAtividade:4, descricao:'TP2: Ordenação por quicksort', linguagem:['Java', 'C++'], status:'Ativo',turma:'Algoritmos e estrutura de dados II', idTurma:1, dataLimite:'22/06/2022'},
         {idAtividade:5, descricao:'TP2: Ordenação por bublesort', linguagem:['Java', 'C++'], status:'Ativo',turma:'Algoritmos e estrutura de dados II', idTurma:1, dataLimite:'22/06/2022'},
+        {idAtividade:4, descricao:'Analisador Lexico', linguagem:['Java', 'C++'], status:'Ativo',turma:'Compiladores', idTurma:2, dataLimite:'22/06/2022'},
+        {idAtividade:5, descricao:'Analisador Sintatico', linguagem:['Java', 'C++'], status:'Ativo',turma:'Compiladores', idTurma:2, dataLimite:'22/06/2022'},
       ]
 }

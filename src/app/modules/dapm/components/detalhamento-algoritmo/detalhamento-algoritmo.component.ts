@@ -65,7 +65,6 @@ export class DetalhamentoAlgoritmoComponent implements OnInit {
   }
 
   onNoClick(){
-    console.log(this.formGroup.value);
     this.dialogRef.close(this.formGroup.value);
   }
 
